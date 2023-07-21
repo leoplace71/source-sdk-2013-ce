@@ -229,6 +229,10 @@ void FX_MuzzleEffect(
 
 		pParticle->m_vecVelocity.Init();
 
+		C_BasePlayer *pPlayer = C_BasePlayer::GetLocalPlayer();
+		Vector velocity = pPlayer->GetLocalVelocity();
+		pParticle->m_vecVelocity += velocity;		
+
 		if ( !pFlashColor )
 		{
 			pParticle->m_uchColor[0]	= 255;
