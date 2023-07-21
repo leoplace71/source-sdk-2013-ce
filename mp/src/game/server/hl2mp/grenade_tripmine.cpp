@@ -295,7 +295,7 @@ int CTripmineGrenade::OnTakeDamage_Alive( const CTakeDamageInfo &info )
 		KillBeam();
 		return FALSE;
 	}
-	return BaseClass::OnTakeDamage_Alive( info );
+	return OnTakeDamage_Alive( info );
 }
 #endif
 
