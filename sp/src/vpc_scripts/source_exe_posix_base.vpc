@@ -65,7 +65,7 @@ $Project
 
 	$Folder	"Link Libraries" [$LINUXALL&&!$DEDICATED]
 	{
-		$ImpLib	libtcmalloc_minimal
+		$File	"$SRCDIR/thirdparty/gperftools-2.0/.libs/libtcmalloc_minimal.so"
 	}
 }
 
