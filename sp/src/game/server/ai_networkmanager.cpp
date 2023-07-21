@@ -1109,8 +1109,9 @@ void CAI_NetworkManager::DelayedInit( void )
 			}
 #endif
 
-			DevMsg( "Node Graph out of Date. Rebuilding... (%d, %d, %d)\n", (int)m_bDontSaveGraph, (int)!CAI_NetworkManager::NetworksLoaded(), (int) engine->IsInEditMode() );
-			UTIL_CenterPrintAll( "Node Graph out of Date. Rebuilding...\n" );
+			DevMsg( "Node Graph out of Date. Refunding... (%d, %d, %d)\n", (int)m_bDontSaveGraph, (int)!CAI_NetworkManager::NetworksLoaded(), (int) engine->IsInEditMode() );
+			if ( developer.GetBool() )
+			UTIL_CenterPrintAll( "Node Graph out of Date. Refunding...\n" );
 			m_bNeedGraphRebuild = true;
 			g_pAINetworkManager->SetNextThink( gpGlobals->curtime + 1 );
 			return;

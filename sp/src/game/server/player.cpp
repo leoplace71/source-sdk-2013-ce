@@ -1434,9 +1434,7 @@ void CBasePlayer::OnDamagedByExplosion( const CTakeDamageInfo &info )
 	if ( !shock && !ear_ringing )
 		return;
 
-	int effect = shock ? 
-		random->RandomInt( 35, 37 ) : 
-		random->RandomInt( 32, 34 );
+	int effect =  random->RandomInt( 32, 34 );
 
 	CSingleUserRecipientFilter user( this );
 	enginesound->SetPlayerDSP( user, effect, false );
